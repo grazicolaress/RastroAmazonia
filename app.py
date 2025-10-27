@@ -7,6 +7,7 @@ app_grazi = Flask (__name__)
 def raiz():
     return 'Olá, turma!'
 
+@app_grazi.route('/ola/<nome>')
 def saudacoes (nome):       #função nova
     return f'Olá, {nome}!'
 
