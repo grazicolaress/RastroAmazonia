@@ -28,3 +28,11 @@
   - Adicionada a rota '/rota2' que retorna uma página HTML com título.
   - Removida a rota dinâmica '/ ola/< nome >' para saudações personalizadas, agora a função não pertence a nenhuma rota.
   - Removido o arquivo 'aula03_rotas.porta.def.py' para unificar o código.
+
+### Aula 04
+- **Descrição**: Adicionado o código da aula 04 ao 'app.py', implementando a renderização de páginas html estáticas para as rotas '/' e '/contato'.
+- **Alterações**:
+  - Importada a biblioteca 'render_template' para renderizar templates HTML.
+  - Configurado o 'app_grazi' com 'template_folder='t_templates'' para definir a pasta dos templates HTML.
+  - Adicionadas rotas '/' (renderiza 'homepage.html') e '/contato' (renderiza 'contato.html').
+  - Removido o arquivo 'aula0_paginas.py' para unificar o código.
