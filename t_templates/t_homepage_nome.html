@@ -1,0 +1,9 @@
+{% extends 't_base.html' %}
+
+{% block titulo %}Teste Dinâmico{% endblock %}
+
+
+{% block conteudo %}
+<h1>Bem vindo(a) à Homepage, {{ nome }}!</h1>   <!-- vai exibir saudação personalizada com 
+                            a variável NOME passada pela rota /usuario/<id> -->
+{% endblock %}

@@ -1,15 +1,13 @@
 {% extends 't_base.html' %}
- 
-{% block conteudo %}
 
-<h2>Olá, {{ dados.nome }} </h2>
+{% block conteudo %}
+<h2>Olá, {{ nome | default(dados.nome) }}</h2>
 <p>
     <!-- 'static' é a pasta do projeto onde copio as imagens -->
     <img class="imgquadrada" src="{{ url_for('static', filename='imagens/professora.jpg') }}">
     
     <br>
     <b>Profissão: </b> {{ dados['profissão'] }} <br/>
-    <b>Disciplina: </b> {{ dados['disciplina'] }}
+    <b>Disciplina: </b> {{ dados['disciplina'] }} <br/>
 </p>
-
 {% endblock %}
