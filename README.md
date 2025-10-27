@@ -17,5 +17,5 @@
 - **Alterações**:
   - Adicionadas rotas '/' e '/ola' (ambas retornam "Olá, turma!").
   - Criada função 'saudacoes(nome)' para retornar saudação com nome.
-  - Usado 'port=8880' e bloco 'if __name__ == '__main__':' para execução.
+  - Usado 'port=8880' e bloco 'if __ name __ == '__ main __':' para execução.
   - Removido o arquivo 'aula02_rota.py' para unificar o código.
