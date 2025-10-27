@@ -20,10 +20,11 @@
   - Usado 'port=8880' e bloco 'if __ name __ == '__ main __':' para execução.
   - Removido o arquivo 'aula02_rota.py' para unificar o código.
 
+
 ### Aula 03
 - **Descrição**: Adicionado o código da aula 03 ao 'app.py', incluindo a rota '/rota1' e a nova rota '/rota2' com resposta em HTML.
 - **Alterações**:
   - Substituída a rota '/ola' por '/rota1', mantendo a resposta "Olá, turma!".
   - Adicionada a rota '/rota2' que retorna uma página HTML com título.
-  - Removida a rota dinâmica '/ola/< nome >' para saudações personalizadas, agora a função não pertence a nenhuma rota.
+  - Removida a rota dinâmica '/ ola/< nome >' para saudações personalizadas, agora a função não pertence a nenhuma rota.
   - Removido o arquivo 'aula03_rotas.porta.def.py' para unificar o código.
