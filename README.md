@@ -44,3 +44,16 @@
   - Adicionada a rota '/usuario' que renderiza 't_usuario.html' com um dicionário de dados dinâmicos ('nome', 'profissão', 'disciplina').
   - Ajustados os templates 't_index.html' e 't_usuario.html' (já existentes em t_templates) para receber os dados dinâmicos corretamente.
   - Removido o arquivo 'aula05_paginas_dinamicas.py' para unificar o código.
+
+### Aula 06
+- **Descrição**: Adicionado o código da aula 06 ao 'app.py', implementando testes dinâmicos com herança de template e rotas dinâmicas avançadas. Foi criada uma nova branch (aula06-heranca-template) para testar essas funcionalidades.
+- **Alterações**:
+  - Adicionadas rotas dinâmicas:
+    - /usuario/< id > - vai exibir saudação personalizada usando template 't_homepage_nome.html'
+    - /usuario/< nome_usuario>;< nome_profissao>;< nome_disciplina> - rota com múltiplos parâmetros para exibir dados de usuário
+  - Implementada herança de template com:
+    - Template base 't_base.html'
+    - Template 't_homepage_nome.html' estende o template base usando {% extends 't_base.html' %}
+    - Criado o arquivo 't_homepage_nome.html' para suportar a nova funcionalidade de saudação personalizada
+  - Mantidas todas as rotas anteriores funcionais
+  - Removido o arquivo 'aula06_dinamico_URL.py' para unificar o código.
