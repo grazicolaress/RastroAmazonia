@@ -36,3 +36,11 @@
   - Configurado o 'app_grazi' com 'template_folder='t_templates'' para definir a pasta dos templates HTML.
   - Adicionadas rotas '/' (renderiza 'homepage.html') e '/contato' (renderiza 'contato.html').
   - Removido o arquivo 'aula04_paginas.py' para unificar o código.
+
+### Aula 05
+- **Descrição**: Adicionado o código da aula 05 ao 'app.py', implementando renderização de páginas HTML dinâmicas para as rotas '/index' e '/usuario'.
+- **Alterações**:
+  - Adicionada a rota '/index' que renderiza 't_index.html' com uma variável dinâmica 'nome'.
+  - Adicionada a rota '/usuario' que renderiza 't_usuario.html' com um dicionário de dados dinâmicos ('nome', 'profissão', 'disciplina').
+  - Ajustados os templates 't_index.html' e 't_usuario.html' (já existentes em t_templates) para receber os dados dinâmicos corretamente.
+  - Removido o arquivo 'aula05_paginas_dinamicas.py' para unificar o código.
