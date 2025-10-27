@@ -35,4 +35,4 @@
   - Importada a biblioteca 'render_template' para renderizar templates HTML.
   - Configurado o 'app_grazi' com 'template_folder='t_templates'' para definir a pasta dos templates HTML.
   - Adicionadas rotas '/' (renderiza 'homepage.html') e '/contato' (renderiza 'contato.html').
-  - Removido o arquivo 'aula0_paginas.py' para unificar o código.
+  - Removido o arquivo 'aula04_paginas.py' para unificar o código.
