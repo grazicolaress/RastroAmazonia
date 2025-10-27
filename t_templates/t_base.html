@@ -4,7 +4,7 @@
 <html lang="pt">
   <head>
     <meta charset="utf-8">
-    <title>Perfil do Usuário</title>
+    <title>{% block titulo %} Perfil do Usuário {% endblock %}</title>
     <link rel = "stylesheet" href="{{ url_for('static', filename = 'css/estilo.css')}}">
 
     
@@ -23,12 +23,12 @@
 
     </div>
 
-    <nav> 
+    <!-- <nav> 
         <a href="/index">Página Inicial</a>
         <a href="/contato">Contato</a>
         <a href="/usuario">Perfil do Usuário</a>
         <a href="/login">Login</a>
-    </nav>
+    </nav> -->
    
     <!--Informação que muda nas páginas coloca como extensão -->
     {% block conteudo %}    
@@ -36,12 +36,12 @@
     {% endblock %}
 
     <!-- Referência ao arquivo JavaScript -->
-    <script src="{{ url_for('static', filename='js/script1.js') }}"> </script>
+    <!-- <script src="{{ url_for('static', filename='js/script1.js') }}"> </script> -->
  
     <!--Chama a função assim que a página carrega -->
-    <script src="{{ url_for('static', filename='js/script2.js') }}" 
-            onload="mostrarDataHora();">  </script>
+    <!-- <script src="{{ url_for('static', filename='js/script2.js') }}" 
+            onload="mostrarDataHora();">  </script> -->
 
-    <h6>Copyright₢ 2025</h6> <!--Ctrl+Alt+C-->
+    <!-- <h6>Copyright₢ 2025</h6> Ctrl+Alt+C -->
   </body>
 </html>
