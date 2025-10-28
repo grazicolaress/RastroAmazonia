@@ -14,20 +14,19 @@ def contato():
 def indice():
     return render_template ('t_index.html', nome='Grazielle') 
                                         
-@app_grazi.route('/usuario')
-def dados_usuario():
-    dados_usu = {"nome": "Grazielle", "profissão": "Estagiária", "disciplina": "Desenvolvimento Web III"}
-    return render_template("t_usuario.html", dados=dados_usu)
 
-@app_grazi.route('/usuario/<id>')       #nova rota para exibir saudacao personalizada
-def saudacao(id):
-    return render_template('t_homepage_nome.html', nome=id)
-
-#acrescenta três parâmetros (nome_usuario, nome_profissao, nome_disciplina)
+#removido def dados_usuarios
+#adicionado rota SEM parâmetros com defaults
+@app_grazi.route('/usuario', defaults={"nome_usuario": "usuário", "nome_profissao": "Não informado", "nome_disciplina": "Não informada"})
 @app_grazi.route('/usuario/<nome_usuario>;<nome_profissao>;<nome_disciplina>') 
 def usuario(nome_usuario, nome_profissao, nome_disciplina):
-    dados_usu = {"profissão": nome_profissao, "disciplina": nome_disciplina}
-    return render_template("t_usuario.html", nome=nome_usuario, dados = dados_usu)
+    dados_usu = {"nome":nome_usuario, "profissão": nome_profissao, "disciplina": nome_disciplina}
+    return render_template("t_usuario.html", nome=nome_usuario, dados=dados_usu)
+
+
+@app_grazi.route('/usuario/<id>')       #rota de usuario com id para saudação personalizada
+def saudacao(id):
+    return render_template('t_homepage_nome.html', nome=id)
 
 if __name__ == "__main__":  
     app_grazi.run(port=8880)
