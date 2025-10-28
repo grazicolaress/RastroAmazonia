@@ -57,3 +57,11 @@
     - Criado o arquivo 't_homepage_nome.html' para suportar a nova funcionalidade de saudação personalizada
   - Mantidas todas as rotas anteriores funcionais
   - Removido o arquivo 'aula06_dinamico_URL.py' para unificar o código.
+
+### Aula 07
+- **Descrição**: Adicionado o código da aula 07 ao 'app.py', implementando rotas com valores padrão usando defaults para acesso sem parâmetros e múltiplas rotas para a mesma função.
+- **Alterações**:
+  - Adicionada rota /usuario com valores padrão usando defaults para quando não há passagem de argumentos
+  - Implementada função única usuario() que trata ambos os casos: com e sem parâmetros
+  - Agora a rota /usuario funciona tanto com quanto sem parâmetros.
+  - Removido o arquivo 'aula07_template.py' para unificar o código.
