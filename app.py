@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session, jsonify #algumas libs importantes
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 import json
 import os
 
@@ -25,21 +25,37 @@ animais = [
     }
 ]
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
-@app.route('/login', methods=['GET', 'POST']) #é para aceitar os dois metodos
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':  #se for envio de form
+    if request.method == 'POST':         #se for envio de form
         email = request.form['email']
         senha = request.form['senha']
-        #validação simples
-        return redirect(url_for('galeria')) 
+        # Validação simples
+        return redirect(url_for('galeria'))
     return render_template('t_login.html') #se for acessar normal
 
+
+@app.route('/cadastro', methods=['GET', 'POST']) #também recebe dois metodos
+def cadastro():
+    if request.method == 'POST':
+        #aqui vai processar cadastro
+        return redirect(url_for('login'))
+    return render_template('t_cadastro.html')
+
+
+@app.route('/galeria')
+def galeria():
+    return render_template('t_galeria.html', animais=animais)
+
+
+@app.route('/loja')
+def loja():
+    return render_template('t_loja.html', animais=animais)
 
 
 
