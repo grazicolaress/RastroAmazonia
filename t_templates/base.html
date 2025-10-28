@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<!-- página template(modelo) com layout base das páginas do site -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastro Amazônia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('index') }}" class="nav-logo">Rastro Amazônia</a>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}">Início</a></li>
+                <li><a href="{{ url_for('galeria') }}">Animais</a></li>
+                <li><a href="{{ url_for('loja') }}">Loja</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<html lang="pt">
-  <head>
-    <meta charset="utf-8">
-    <title>Perfil do Usuário</title>
-    <link rel = "stylesheet" href="{{ url_for('static', filename = 'css/estilo.css')}}">
-    
-    {% block scripts %} 
-    
-    {% endblock %}
-  </head>
- 
-    <body>
-    <!--Informação que muda nas páginas coloca como extensão -->
-    {% block conteudo %}    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
 
-    {% endblock %}
+    <footer>
+        <p>&copy; 2025 Rastro Amazônia - Atividade de Desenvolviemnto Webb III</p>
+    </footer>
 
-    </body>
+    <script src="{{ url_for('static', filename='js/validacao.js') }}"></script>
+</body>
 </html>

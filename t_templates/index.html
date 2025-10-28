@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Adote Virtualmente um Animal da Amazônia</h1>
+        <p>Ajude na conservação de espécies amazônicas enquanto acompanha a jornada do seu animal adotado</p>
+        <a href="{{ url_for('galeria') }}" class="cta-button">Conhecer os Animais</a>
+    </div>
+</div>
+
+<section class="features">
+    <div class="feature">
+        <h3>🐆 Adoção Virtual</h3>
+        <p>Adote um animal e acompanhe seu percurso em tempo real</p>
+    </div>
+    <div class="feature">
+        <h3>🔬 Monitoramento Científico</h3>
+        <p>Seu apoio financia pesquisas de conservação</p>
+    </div>
+    <div class="feature">
+        <h3>🌳 Preservação</h3>
+        <p>Contribua para a proteção da biodiversidade amazônica</p>
+    </div>
+</section>
+{% endblock %}

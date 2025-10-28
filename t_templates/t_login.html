@@ -1,17 +1,19 @@
-{% extends 't_base.html' %}
+{% extends "base.html" %}
 
-{% block conteudo %}
-    <form action="/autenticar" method="POST" > 
-        <!-- 
-
-        ao clickar no botão OK, no submit vai para a rota /autenticar -->
-        <!-- Quando trabalha com métodos GET (padrão) ou POST (declara method) --> 
-        <br/><br/>
-       
-        Usuário: <input type = "text" name="nome_usuario"><br/><br/>
-        Senha  : <input type = "text" name="senha"><br/><br/>
-        <button type = "submit">OK</button>
+{% block content %}
+<div class="form-container">
+    <h2>Login</h2>
+    <form id="loginForm" method="POST">
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+        </div>
+        <button type="submit">Entrar</button>
     </form>
-
+    <p>Não tem conta? <a href="{{ url_for('cadastro') }}">Criar Conta</a></p>
+</div>
 {% endblock %}
-
